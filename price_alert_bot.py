@@ -92,12 +92,10 @@ class PriceAlertBot:
                         # Prepare message for Telegram
                         change_direction = "⬆️increased" if current_price > last_price else "🔻decreased"
                         message = (
-                            f"Time: {current_time}\n"
-                            f"<b>{self.ticker}</b> Price <b>{change_direction}</b> by\n"
-                            f"<b>{(price_change_percentage * 100):,.2f}%</b>\n"                            
-                            f"Trading Volume: <u>{formatted_volume}</u>\n\n"
-                            f"Previous Price: {formatted_last_price}\n"
-                            f"Current Price: <b>{formatted_current_price}</b>"
+                            f"{current_time}\n"
+                            f"<b>{self.ticker}</b> {change_direction} by <b>{(price_change_percentage * 100):,.2f}%</b>\n"
+                            f"From {formatted_last_price} ➡ <b>{formatted_current_price}</b>\n"
+                            f"Trading Volume: <u>{formatted_volume}</u>"
                         )
 
                         # Send message via telegram
