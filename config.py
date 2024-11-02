@@ -14,7 +14,8 @@ def check_env_vars():
 
 # Shared state (this will be injected into classes)
 shared_state = {
-    'last_price': None
+    'last_price': None,
+    'alert_sent_recently': False
 }
 
 # Telegram bot settings
@@ -30,7 +31,7 @@ GOOGLE_WORKSHEET_NAME = os.getenv("GOOGLE_WORKSHEET_NAME", "")
 # Trading pair and price change value
 TICKER = 'BTC/USDC'
 # PRICE_CHANGE_THRESHOLD = 5
-PRICE_CHANGE_PERCENTAGE = 0.005
+PRICE_CHANGE_PERCENTAGE = 0.001
 
 # Sleep time (in seconds)
 SLEEP_TIME = 30
