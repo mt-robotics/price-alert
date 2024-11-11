@@ -1,5 +1,7 @@
 # Other files
 trading-price-alert-fa51679be1d2.json
+nohup.out
+.pylintrc
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
